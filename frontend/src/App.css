@@ -1,0 +1,202 @@
+:root {
+  --primary: #0073e6;
+  --primary-hover: #005bb5;
+  --bg: #ffffff;
+  --text: #333333;
+  --text-muted: #6a6a6a;
+  --border: #e0e0e0;
+  --hover-bg: #f5f9fc;
+}
+
+#root {
+  width: 100%;
+}
+
+.navbar {
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-left img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--text);
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+  background-color: var(--hover-bg);
+  border-radius: 4px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-info {
+  text-align: right;
+}
+
+.user-info span {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.user-info p {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.logout-button {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Dashboard Statistics Cards Styling */
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.dashboard-stat-card {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+.dashboard-stat-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-stat-icon {
+  font-size: 2.5rem;
+  opacity: 0.7;
+  margin-right: 1rem;
+}
+
+.dashboard-stat-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6a6a6a;
+}
+
+.dashboard-stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Absences in Progress Card */
+.absences-card {
+  background-color: #fff4e6;
+  color: #ff9800;
+}
+
+/* Approved Leaves Card */
+.approved-leaves-card {
+  background-color: #e6f3ea;
+  color: #4caf50;
+}
+
+/* Expense Notes Card */
+.expense-notes-card {
+  background-color: #e6f2ff;
+  color: #2196f3;
+}
+
+/* Recent Activity Section Styles */
+.recent-activity-section {
+  margin-top: 2.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+}
+
+.recent-activity-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.recent-activity-list {
+  border-top-width: 1px;
+  border-color: #e5e7eb;
+}
+
+.recent-activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.recent-activity-item:hover {
+  background-color: #f9fafb;
+}
+
+.recent-activity-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.recent-activity-action {
+  font-weight: 500;
+  color: #333;
+}
+
+.recent-activity-user {
+  font-size: 0.875rem;
+  color: #6a6a6a;
+}
+
+.recent-activity-date {
+  font-size: 0.875rem;
+  color: #6a6a6a;
+}
