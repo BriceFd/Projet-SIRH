@@ -11,6 +11,21 @@ export const getAllConges = async (req, res) => {
     }
 };
 
+// GET : Obtenir un congé par ID
+export const getCongeById = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const [rows] = await db.query('SELECT * FROM conges WHERE id = ?', [id]);
+        if (rows.length === 0) {
+            return res.status(404).json({ error: 'Congé non trouvé' });
+        }
+        res.json(rows[0]);
+    } catch (err) {
+        console.error('Erreur :', err);
+        res.status(500).json({ error: 'Erreur serveur' });
+    }
+};
+
 // POST : Ajouter un congé
 export const createConge = async (req, res) => {
     const { user_id, type, start_date, end_date, status } = req.body;

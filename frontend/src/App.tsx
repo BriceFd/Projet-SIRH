@@ -1,7 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
-import Header from './Header';
-import Absences from './Absences';
-import Dashboard from './Dashboard';
+import Header from './Header.tsx';
+import Absences from './Absences.tsx';
+import Dashboard from './Dashboard.tsx';
+import Conges from './Conges.tsx';
 import './App.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/absences" element={<Absences />} />
+          <Route path="/conges" element={<Conges />} />
         </Routes>
       </main>
 
